@@ -2,9 +2,10 @@ let coinLayerHeader = "Call " + "<u>coinlayer API</u>" + " to get Cryptocurrenci
 let coinLayerUrlLink = coinLayerHeader.link("https://coinlayer.com/documentation");
 document.getElementById("headerLink").innerHTML = coinLayerUrlLink;
 
-const baseURL = "http://api.coinlayer.com/api/live";
+const baseURL = "https://api.coinlayer.com/api/live";
 let APIkey = '51c783eaa8d8d578429233099980e90f';
 let url =  baseURL + '?access_key=' + APIkey; 
+
 
 fetch(url) 
 
@@ -26,11 +27,17 @@ fetch(url)
   console.log("rates:",rates) 
 
   let listItemC = document.createElement('p'); 
-    
+  
+  let UTCDate = new Date(timeStamp*1000).toLocaleString();
+  // console.log(UTCDate);
+
   listItemC.innerHTML = "success: " + success + '<br>' + "terms: " + terms + 
-                        '<br>' + "privacy: " + privacy + '<br>' + "timestamp: " + timeStamp + '<br>' + 
-                        "target: " + target + '<br>'; 
-    
+                        '<br>' + "privacy: " + privacy + '<br>' + "UTC timestamp (readable format): " + timeStamp + ' (' + 
+                        UTCDate + ')' + '<br>' + "target: " + target + '<br>'; 
+  
+  
+  
+
   listItemC.style.border = 'solid 1px black';
   listItemC.style.backgroundColor = 'lightgrey';
   cryptosList.appendChild(listItemC);    
