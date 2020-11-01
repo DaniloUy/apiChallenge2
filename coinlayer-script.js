@@ -38,6 +38,9 @@ fetch(url)
   let target = cryptoRates.target
   let rates = cryptoRates.rates  
   console.log("rates:",rates) 
+  
+  let listItemD = document.getElementById('cryptosList');
+  listItemD.innerHTML = ""; 
 
   let listItemC = document.createElement('p'); 
   
