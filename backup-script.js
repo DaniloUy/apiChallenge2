@@ -37,14 +37,28 @@ fetch(url)
   let target = cryptoRates.target
   let rates = cryptoRates.rates  
   console.log("rates:",rates) 
-  
+  /*
+  let listItemD = document.getElementById('cryptosHeader');
+  listItemD.innerHTML = ""; 
+  */
   cryptosHeader.innerHTML = ""; 
   cryptosList.innerHTML = ""; 
 
+  /* let listItemC = document.createElement('p'); */  
+  
   let UTCDate = new Date(timeStamp*1000).toLocaleString();
   // console.log(UTCDate);
   
+  /*
+  listItemC.innerHTML = "success: " + success + '<br>' + "terms: " + terms + 
+                        '<br>' + "privacy: " + privacy + '<br>' + "UTC timestamp (readable format): " + timeStamp + ' (' + 
+                        UTCDate + ')' + '<br>' + "target: " + target + '<br>'; 
   
+  listItemC.style.border = 'solid 1px black';
+  listItemC.style.backgroundColor = 'lightgrey';
+  cryptosList.appendChild(listItemC); 
+  */
+
   cryptosHeader.innerHTML = "success: " + success + '<br>' + "terms: " + terms + 
                             '<br>' + "privacy: " + privacy + '<br>' + "UTC timestamp (readable format): " + timeStamp + ' (' + 
                             UTCDate + ')' + '<br>' + "target: " + target + '<br>'; 
