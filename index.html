@@ -21,6 +21,8 @@
     </header>
     <br>
      
+    <div class="wrapper">
+    
     <!--Used Bootstrap container class for responsive page width resizing--> 
     <div class="container"> 
 
@@ -43,18 +45,37 @@
     </div>
 
     <br>
+    <!-- 
+    <input type="button" id="first" onclick="firstPage()" value="first" />
+    -->
+    <input type="button" id="previous" value="previous 10" />
+	  <input type="button" id="next" value="next 10" />
+    <!--
+    <input type="button" id="last" onclick="lastPage()" value="last" />
+    --> 
+    <br>
+    <br>
          
     <div class="container"> 
        
      <div class="cryptosDiv">  
       <p id="cryptosHeader"></p>  
-      <ol id="cryptosList">
-      <!--The JavaScript will load items here-->
-      </ol>
-     </div>   
+    
+      <ul id="cryptosList">
         
+      <!--The JavaScript will load items here-->
+      
+      </ul>
+      
+     </div>   
+       
     </div> 
-     
+    
+    <div id="list" style="background-color: lightgray; border: solid black;
+                          margin-left: 75px; margin-right: 75px;">
+
+    </div>
+              
     <script src="coinlayer-script.js"></script>
      
   </body>
