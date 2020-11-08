@@ -32,6 +32,12 @@ fetch(url)
 })
 
 .then(function(json) {
+
+  document.getElementById("next").disabled = true;
+  document.getElementById("previous").disabled = true;
+  
+  document.getElementById("list").innerHTML = "";
+  
   let cryptoRates = json; 
   console.log('cryptoRates:',cryptoRates);
   let success = cryptoRates.success 
@@ -50,8 +56,7 @@ fetch(url)
 
   let UTCDate = new Date(timeStamp*1000).toLocaleString();
   // console.log(UTCDate);
-  
-  
+    
   cryptosHeader.innerHTML = "success: " + success + '<br>' + "terms: " + terms + 
                             '<br>' + "privacy: " + privacy + '<br>' + "UTC timestamp (readable format): " + timeStamp + ' (' + 
                             UTCDate + ')' + '<br>' + "target: " + target + '<br>'; 
